@@ -2,7 +2,7 @@
 
 This project integrates **N8N**, **Supabase**, **OpenAI**, **AWS Textract**, **Email**. **Stirling PDF** and **Google Drive** to process, store, and retrieve documents efficiently using **semantic search based on embeddings**. The workflow follows a structured approach, starting with **data ingestion**, followed by **classification and processing**, and finally **storing and querying the data in Supabase**.
 
-![alt text](full_project.png)
+![alt text](Project/full_project.png)
 
 ---
 
