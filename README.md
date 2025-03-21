@@ -128,17 +128,17 @@ The database schema is designed to store documents, metadata, and vector embeddi
 
 ## Challenges Faced
 
-**Multi-Service Authentication**  
-1 - Configuring API keys and OAuth for Google Drive, AWS, OpenAI, and Supabase required careful management.  
+1 - **Multi-Service Authentication**  
+  - Configuring API keys and OAuth for Google Drive, AWS, OpenAI, and Supabase required careful management.  
 
-2️ - Extracting Financial Data Instead of Storing Full Emails**  
+2️ - **Extracting Financial Data Instead of Storing Full Emails**  
    - Instead of storing entire email content or attachments, **OpenAI extracts only relevant financial details**.  
    - This approach **reduces storage size** and **improves search accuracy**.  
 
-3️**Optimizing Semantic Search**  
+3️ - **Optimizing Semantic Search**  
    - Fine-tuned **pgvector** for efficient similarity-based financial data retrieval.  
 
-4️**Error Handling & Logging**  
+4️ - **Error Handling & Logging**  
    - Added **error alerts** via **Gmail** for failures in document extraction and processing.  
 
 ---
@@ -150,6 +150,4 @@ This N8N workflow **automates financial data extraction from emails**, integrate
 **Future Improvements**  
 - Improve financial entity extraction with **domain-specific NLP models**.  
 - Optimize **vector search performance** using **hybrid retrieval** methods.  
-- Implement **role-based access control (RBAC)** for better data security.  
-
----
+- Implement **role-based access control (RBAC)** for better data security. 
