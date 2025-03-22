@@ -1,4 +1,4 @@
-# N8N Workflow - Core Document, Audio & Text Processing (Financial)
+# 🚀 N8N Workflow - Core Document, Audio & Text Processing (Financial)
 
 This project integrates **N8N**, **Supabase**, **OpenAI**, **AWS Textract**, **Email**. **Stirling PDF** and **Google Drive** to process, store, and retrieve documents efficiently using **semantic search based on embeddings**. The workflow follows a structured approach, starting with **data ingestion**, followed by **classification and processing**, and finally **storing and querying the data in Supabase**.
 
@@ -6,7 +6,7 @@ This project integrates **N8N**, **Supabase**, **OpenAI**, **AWS Textract**, **E
 
 ---
 
-## Workflow Overview
+## 📌 1️⃣ Workflow Overview
 
 ### **Step 1: Data Ingestion (Triggers)**
 - **Google Drive Trigger**: Detects newly added or updated files in a specified folder.
@@ -37,7 +37,7 @@ This project integrates **N8N**, **Supabase**, **OpenAI**, **AWS Textract**, **E
 
 ---
 
-## Authentication Requirements
+## 🔑 2️⃣ Authentication Requirements
 
 
 To operate, the workflow requires credentials for multiple services:
@@ -74,9 +74,9 @@ The database schema is designed to store documents, metadata, and vector embeddi
 
 ---
 
-## N8N Workflow Step-by-Step
+## 🔄 4️⃣ N8N Workflow Step-by-Step
 
-### Step 1: Fetching Emails & Files
+### 📂 Step 1: Fetching Emails & Files
 - **Google Drive Trigger**: Detects new files in a specified folder.
 - **IMAP Email Trigger**: Monitors inbox for new emails **(without storing attachments on cloud)**.
 - **Extracts financial data from email body and attachments using OpenAI NLP**.
@@ -88,7 +88,7 @@ The database schema is designed to store documents, metadata, and vector embeddi
 
 ---
 
-### Step 2: Classifying and Processing Documents
+### 📂 Step 2: Classifying and Processing Documents
 - **File Type Identification**: Checks if the file is a **PDF, image, or audio**.
 - **Text Extraction (OCR)**:
   - If **PDF or Image**, use **AWS Textract** to extract text.
@@ -103,7 +103,7 @@ The database schema is designed to store documents, metadata, and vector embeddi
 
 ---
 
-### Step 3: Storing Data in Supabase
+### 📂 Step 3: Storing Data in Supabase
 - **Save extracted financial data from emails** (Sender, Subject, Date, and extracted content).
 - **Generate embeddings** using **OpenAI API**.
 - **Store embeddings in Supabase Vector Store** for semantic search.
@@ -115,7 +115,7 @@ The database schema is designed to store documents, metadata, and vector embeddi
 
 ---
 
-### Step 4: Performing Semantic Search
+### 📂 Step 4: Performing Semantic Search
 - When a user searches for financial data, the **Supabase Vector Store** retrieves the most relevant emails/documents based on semantic similarity using.
 
 **Nodes Involved**:
@@ -123,7 +123,7 @@ The database schema is designed to store documents, metadata, and vector embeddi
 
 ---
 
-### Step 5: Error Handling & Notifications
+### 📂 Step 5: Error Handling & Notifications
 - If a process fails, the workflow captures the error and sends an alert via email.
 - Logs the error for debugging purposes.
 
@@ -134,7 +134,7 @@ The database schema is designed to store documents, metadata, and vector embeddi
 
 ---
 
-## Challenges Faced
+## 🚧 5️⃣ Challenges Faced
 
 1 - **Multi-Service Authentication**  
   - Configuring API keys and OAuth for Google Drive, AWS, OpenAI, and Supabase required careful management.  
@@ -154,7 +154,7 @@ The database schema is designed to store documents, metadata, and vector embeddi
   - Debugging scripts and handling data transformations required additional learning.
   - Using JavaScript in Function Nodes for tasks like data extraction, error handling, and API requests added complexity for someone unfamiliar with the language.
 
-## Conclusion
+## ✅ 6️⃣ Conclusion
 
 This N8N workflow **automates financial data extraction from emails**, integrates semantic search, and efficiently manages document metadata using **Supabase, OpenAI, AWS, and Google Drive**.
 
